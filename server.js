@@ -2,23 +2,23 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
-const replaceTemplate = require('./starter/modules/replaceTemplate');
+const replaceTemplate = require('./modules/replaceTemplate');
 const port = 3000;
 
 const data = fs.readFileSync(
-  `${__dirname}/starter/dev-data/data.json`,
+  `${__dirname}/dev-data/data.json`,
   'utf-8'
 );
 const tempoverview = fs.readFileSync(
-  `${__dirname}/starter/templates/template-overview.html`,
+  `${__dirname}/templates/template-overview.html`,
   'utf-8'
 );
 const tempproduct = fs.readFileSync(
-  `${__dirname}/starter/templates/template-product.html`,
+  `${__dirname}/templates/template-product.html`,
   'utf-8'
 );
 const tempcard = fs.readFileSync(
-  `${__dirname}/starter/templates/template-card.html`,
+  `${__dirname}/templates/template-card.html`,
   'utf-8'
 );
 const productdata = JSON.parse(data);
